@@ -13,7 +13,7 @@ import { getToken } from '../api';
 
 const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${
   import.meta.env.VITE_CLIENT_ID
-}&redirect_uri=${import.meta.env.VITE_CALLBACK_URL}&scope=repo`;
+}&redirect_uri=${window.location.origin}/login&scope=repo`;
 
 const handleLogin = () => {
   window.location.assign(githubAuthUrl);
